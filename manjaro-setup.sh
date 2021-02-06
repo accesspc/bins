@@ -4,6 +4,8 @@
 sudo pacman -Syyu
 # Yay pkg manager
 sudo pacman -Syu yay
+# Give pacman/yay some colors
+sudo sed -s -r -i 's/^#?Color/Color/' /etc/pacman.conf
 
 # Reboot
 
@@ -15,6 +17,7 @@ mhwd-kernel -r linux59
 
 # General tools
 yay -Syu autoconf automake binutils conky dnsutils fakeroot gcc gsmartcontrol icedtea-web ipcalc lm_sensors m4 make networkmanager-fortisslvpn network-manager-sstp nmap patch pkgconf sstp-client tcpdump vim
+yay -Syu transmission-gtk transmission-remote-gtk
 
 # To allow ASDM access:
 # edit /usr/lib/jvm/java-8-openjdk/jre/lib/security/java.security and remove MD5 from jdk.jar.disabledAlgorithms=
