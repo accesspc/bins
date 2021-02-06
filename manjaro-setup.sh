@@ -7,6 +7,12 @@ sudo pacman -Syu yay
 
 # Reboot
 
+# Latest kernel
+mhwd-kernel -i linux510
+mhwd-kernel -r linux59
+
+# Reboot
+
 # General tools
 yay -Syu autoconf automake binutils conky dnsutils fakeroot gcc gsmartcontrol icedtea-web ipcalc lm_sensors m4 make networkmanager-fortisslvpn network-manager-sstp nmap patch pkgconf sstp-client tcpdump vim
 
@@ -27,10 +33,11 @@ SetHandler "proxy:unix:/run/php-fpm/php-fpm.sock|fcgi://localhost/"
 </FilesMatch>
 EOF
 
-sudo sed -s -i -r 's/#?LoadModule proxy_module /LoadModule proxy_module /g' /etc/httpd/conf/httpd.conf
-sudo sed -s -i -r 's/#?LoadModule proxy_fcgi_module /LoadModule proxy_fcgi_module /g' /etc/httpd/conf/httpd.conf
-sudo echo "Include conf/extra/php-fpm.conf" >> /etc/httpd/conf/httpd.conf
-sudo echo "Include conf/vhosts/*.conf" >> /etc/httpd/conf/httpd.conf
+# As root:
+sed -s -i -r 's/#?LoadModule proxy_module /LoadModule proxy_module /g' /etc/httpd/conf/httpd.conf
+sed -s -i -r 's/#?LoadModule proxy_fcgi_module /LoadModule proxy_fcgi_module /g' /etc/httpd/conf/httpd.conf
+echo "Include conf/extra/php-fpm.conf" >> /etc/httpd/conf/httpd.conf
+echo "Include conf/vhosts/*.conf" >> /etc/httpd/conf/httpd.conf
 
 # Dev tools and services
 yay -Syu ansible aws-cli code freerdp git inkscape jq nodejs python-pylint remmina terraform vault
@@ -62,6 +69,3 @@ yay -R $(yay -Qdtq)
 # Unused packages
 yay -Rcs mesa-demos xfburn thunderbird xfcs4-notes-plugin
 
-# Latest kernel
-mhwd-kernel -i linux510
-mhwd-kernel -r linux59
