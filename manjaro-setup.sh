@@ -16,7 +16,7 @@ mhwd-kernel -r linux59
 # Reboot
 
 # General tools
-yay -Syu autoconf automake binutils conky dnsutils fakeroot gcc gsmartcontrol icedtea-web ipcalc lm_sensors m4 make networkmanager-fortisslvpn network-manager-sstp nmap patch pkgconf sstp-client tcpdump vim
+yay -Syu autoconf automake binutils conky dnsutils fakeroot gcc gsmartcontrol icedtea-web ipcalc lm_sensors lshw m4 make networkmanager-fortisslvpn network-manager-sstp nmap patch pkgconf sstp-client tcpdump vim
 yay -Syu transmission-gtk transmission-remote-gtk
 
 # To allow ASDM access:
