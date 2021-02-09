@@ -50,7 +50,7 @@ sudo pip3 install hvac
 # yay -Syu gmime libpurple intltool pidgin-sipe
 
 # Extra software from AUR
-yay -Syu amazon-workspaces-bin brave-bin google-chrome mattermost-desktop-bin spotify teams zoom
+yay -Syu amazon-workspaces-bin brave-bin google-chrome mattermost-desktop-bin postman-bin spotify teams zoom
 
 # Citrix Receiver
 yay -Syu icaclient
