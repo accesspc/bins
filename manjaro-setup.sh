@@ -10,6 +10,11 @@ sudo sed -s -r -i 's/^#?Color/Color/' /etc/pacman.conf
 systemctl enable sshd.service
 systemctl enable systemd-timesyncd.service
 
+# Multi 3.5 jack - enable microphone support
+cat <<EOF > /etc/modprobe.d/alsa.conf
+options snd-hda-intel model=dell-headset-multi
+EOF
+
 # Reboot
 
 # Latest kernel
