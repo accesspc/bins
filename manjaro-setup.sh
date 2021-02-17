@@ -7,6 +7,9 @@ sudo pacman -Syu yay
 # Give pacman/yay some colors
 sudo sed -s -r -i 's/^#?Color/Color/' /etc/pacman.conf
 
+systemctl enable sshd.service
+systemctl enable systemd-timesyncd.service
+
 # Reboot
 
 # Latest kernel
