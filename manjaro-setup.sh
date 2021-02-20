@@ -27,6 +27,9 @@ mhwd-kernel -r linux59
 yay -Syu autoconf automake binutils conky dnsutils fakeroot gcc gsmartcontrol icedtea-web ipcalc lm_sensors lshw m4 make meld networkmanager-fortisslvpn network-manager-sstp nmap patch pkgconf sstp-client tcpdump vim
 yay -Syu transmission-gtk transmission-remote-gtk
 
+# LibreOffice pack
+yay -Syu libreoffice-fresh libreoffice-fresh-en-gb
+
 # To allow ASDM access:
 # edit /usr/lib/jvm/java-8-openjdk/jre/lib/security/java.security and remove MD5 from jdk.jar.disabledAlgorithms=
 
