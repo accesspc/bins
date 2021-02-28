@@ -18,7 +18,7 @@ EOF
 # Reboot
 
 # Latest kernel
-mhwd-kernel -i linux510
+mhwd-kernel -i linux511
 mhwd-kernel -r linux59
 
 # Reboot
